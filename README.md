@@ -1,35 +1,23 @@
-HackCU
+Foxy Lib
 ======
+**Any Package. Anywhere. Anytime.**
 
-Building a hacking culture at the University of Colorado, Boulder. Our first national Hackathon is coming on April 10th, 2015. Signup and more info at [HackCU.org](http://HackCU.org/)
+Foxy Lib gives you access to the world's library of software **without downloading anything**. Whenever your local machine cannot resolve a command, it gets escalated to the Foxy Servers where we execute it using the current packages in our stash.
 
-## Install
+<br>
+##Inspiration
+Every software developer has struggled with software downloads. Whether it is a difficult to configure install process or a slow internet connection, it can kill productivity. You want to iterate as quickly as possible, and this tool allows you to do just that.
 
-1. Git it: `git clone https://github.com/Zandrr/HackCU HackCU && cd $_`
-1. Make sure you have node.js installed
-1. Install dependencies:
-  - Install `imagemagick` and `graphicsmagick`
-  - `npm install`
+<br>
+## Execution
+We use Error. Usage: foxy <commands> as the bash listener for all of your commands. This was built with a complex bash parsing algorithm. After your local machine quits, Foxy saves the day by escalating your command to our Google Compute Engine Server. At this point, the resolution occurs with yet another bash script. If the package you request cannot be resolved from our Library, you are sent home empty-handed.
 
-## Style Guidelines
+<br>
+## What's Next?
+The goal is to continue iterating upon this idea for our Entrepreneurial Ventures Capstone. This is a huge need which needs to be remedied. Stay in touch if you are interested from our launch site at [foxylib.co](foxylib.co).
 
-In addition, all links should contain the HTML target attribute "_blank".
-
-### Example:
-
-Before:
-
-    <a href="https://www.facebook.com/letsHackCU">Visit our facebook</a>
-
-After:
-
-    <a href="https://www.facebook.com/letsHackCU" target="_blank">Visit our facebook</a>
-
-## Deployment
-
-1. Check the site to make sure that everything looks OK. Give it about 30 seconds to build.
-  - `gulp serve:dist`
-1. Make sure your `AWS_ACCESS_KEY` and `AWS_SECRET_KEY` environment variables
-   are set. Hit up @ianks for those keys.
-1. Publish the site to production:
-  - `gulp publish`
+<br>
+##The Team
+Co-founders of [HackCU](hackcu.org):
+* [Dawson Botsford](github.com/dawsonbotsford)
+* [Alex Campbell](github.com/zandrr)
