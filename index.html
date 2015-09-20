@@ -1,64 +1,190 @@
----
----
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ site.title }}</title>
-	<meta name="keywords" content="{{ site.keywords }}">
-	<meta name="description" content="{{ site.description }}">
-  <link rel="stylesheet" href="combo.css">
-  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-  {% if site.favicon %}<link rel="shortcut icon" href="{{ site.favicon }}" type="image/x-icon">{% endif %}
-	{% if site.touch_icon %}<link rel="apple-touch-icon" href="{{ site.touch_icon }}">{% endif %}
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Foxy Lib</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body>
-  <div id="main">
 
-    <nav><ul>
-      {% for node in site.posts reversed %}
-        {% capture id %}{{ node.id | remove:'/' | downcase }}{% endcapture %}
-        <li class="p-{{id}}"><a href="#{{id}}">{{node.title}}</a></li>
-      {% endfor %}
-    </ul></nav>
+<body id="page-top" class="index">
 
-
-    {% for page in site.posts reversed %}
-      {% capture id %}{{ page.id | remove:'/' | downcase }}{% endcapture %}
-      <div id="{{id}}" class="section p-{{id}}">
-        {% if page.icon %}
-        <div class="subtlecircle sectiondivider imaged">
-          <img src="{{page.icon}}" alt="section icon" />
-          <h5 class="icon-title">{{ page.title }}</h5>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="col-md-3">
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Why</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">How</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">What</a>
+                    </li>
+                </ul>
+            <!-- /.navbar-collapse -->
+            </div>
+         </div>
         </div>
-        {% elsif page.fa-icon %}
-        <div class="subtlecircle sectiondivider faicon">
-          <span class="fa-stack">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-{{ page.fa-icon }} fa-stack-1x"></i>
-          </span>
-          <h5 class="icon-title">{{ page.title }}</h5>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <img src="./img/fox.png" id="logo" class="img-responsive jumbo"></img>
+                <h1 class>Foxy Lib</h1>
+                <h3 class="jumbo">Any Package. Anywhere. Anytime.</h3>
+
+            </div>
         </div>
-        {% endif %}
-        <div class="container {{ page.style }}">
-          {{ page.content }}
+    </header>
+<!-- About Section -->
+    <section id="about" class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Why</h2>
+                    <h3 class="section-subheading text-muted">
+                        We found ourselves spending  too much time and diskspace installing and configuring packages that we would only use one time.  We
+                    thought that there must be a better way.
+                    </h3>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="container col-md-6">
+                    <h1>Less time installing,</h1>
+                <h1 style="color:#0099FF; padding-bottom:61px;">More time BUILDING</h1>
+                <i class="fa fa-clock-o fa-lg" style="font-size: 12em;"></i>
+                </div>
+                <div class= "container col-md-6">
+                    <h1>Less disk space used,</h1>
+                <h1 style="color:#0099FF; padding-bottom:25px;">By using packages in the cloud.</h1>
+                <i class="fa fa-cloud fa-lg" style="font-size: 12em;"></i>
+                </div>
+            </div>
+                <div class="col-lg-12">
+                    
+                </div>
+            </div>
         </div>
-      </div>
-    {% endfor %}
+    </section>
 
 
-    <div id="footer" class="section text-white">
-      <div class="container">
-        {% capture foottext %} {% include footer.md %} {% endcapture %}
-        {{ foottext | markdownify }}
-      </div>
-    </div>
-  </div>
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">How</h2>
+                    <h3></h3>
+                </div>
+            </div>
+        </div>
+    </section>
 
-{% include analytics.html %}
+
+    <!-- Team Section -->
+    <section id="team" class="bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="margin-bottom: 80px">What</h2>
+                        <h3 class="jumbo">Any Package. Anywhere. Anytime.</h3>
+                    <div class="container" style="margin-bottom: 80px">
+
+
+
+
+<!--             <div class="row">
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="" class="img-responsive img-circle" alt="">
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="" class="img-responsive img-circle" alt="">
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
+
 </body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="site.js"></script>
+
 </html>
