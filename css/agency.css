@@ -351,6 +351,7 @@ section h3.section-subheading {
   font-style: italic;
   font-weight: 400;
   margin-bottom: 75px;
+  line-height: 210%;
 }
 @media (min-width: 768px) {
   section {
@@ -684,4 +685,7 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #fed136;
+}
+#emailUs {
+  padding: 17px;
 }
