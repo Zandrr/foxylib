@@ -515,7 +515,7 @@ section h3.section-subheading {
   .timeline > li .timeline-image {
     width: 150px;
     height: 150px;
-    margin-left: -75px;
+    margin-left: 25px;
   }
   .timeline > li .timeline-image h4 {
     font-size: 18px;
@@ -692,3 +692,9 @@ body {
 #mainTitle {
   margin-top: -75px;
 }
+#logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  margin-bottom: 90px;
+  height: 350px;
