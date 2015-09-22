@@ -692,3 +692,10 @@ body {
 #mainTitle {
   margin-top: -75px;
 }
+#logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  margin-bottom: 90px;
+  height: 350px;
+}
